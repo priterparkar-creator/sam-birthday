@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Happy Birthday Cart for Sakshi</title>
+    <link rel="icon" href="favicon.ico" type="image/x-icon">
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Comic+Neue:wght@400;700&family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
+</head>
+<body>
+    <header>
+        <div class="container">
+            <div class="logo-container">
+                <img src="sakshi-photo.jpeg" alt="Sakshi" class="logo-photo">
+            </div>
+            <h1>🎉 Happy Birthday Cart for Sakshi 🎂</h1>
+            <p>Aapke liye ek special surprise!</p>
+        </div>
+    </header>
+
+    <main class="container">
+        <section class="products">
+            <h2>Khazane Ki Khoj (Gifts Collection)</h2>
+            <div class="product-grid">
+                <div class="product-card">
+                    <div class="product-image">
+                        <img src="images/book.jpg" alt="add kr gadhi" class="product-img">
+                        <i class="fas fa-book" style="display: none;"></i>
+                    </div>
+                    <h3>Isko cart me add karo</h3>
+                    <p class="price">₹395</p>
+                    <button class="add-to-cart" data-id="book" data-name="han han thik hai" data-price="395">Add to Cart</button>
+                </div>
+                
+                <div class="product-card">
+                    <div class="product-image">
+                        <img src="images/copy.jpg" alt="isko bhi karle aaloo" class="product-img">
+                        <i class="fas fa-copy" style="display: none;"></i>
+                    </div>
+                    <h3>Isko bhi</h3>
+                    <p class="price">₹150</p>
+                    <button class="add-to-cart" data-id="copy" data-name="Chalo chalo aage bado" data-price="150">Add to Cart</button>
+                </div>
+            </div>
+        </section>
+
+        <section class="cart">
+            <h2>Apna Birthday Cart</h2>
+            <div class="cart-container">
+                <div class="cart-items">
+                    <div class="cart-empty">Aapka cart khali hai jaise mere dimaag se ideas!</div>
+                </div>
+                <div class="cart-summary">
+                    <div class="cart-total">
+                        <span>Kul Total: </span>
+                        <span id="cart-total">₹0</span>
+                    </div>
+                    <div class="discount-section">
+                        <input type="text" id="discount-code" placeholder="Discount code daalo">
+                        <button id="apply-discount">Apply</button>
+                    </div>
+                    <div class="discount-message" id="discount-message"></div>
+                    <button id="checkout" class="checkout-btn" disabled>Proceed to Checkout</button>
+                </div>
+            </div>
+        </section>
+
+        <section class="checkout-form" id="checkout-form" style="display: none;">
+            <h2>Delivery Details (Aapke ghar bhejna bhi to hai! )</h2>
+            <form id="delivery-form">
+                <div class="form-group">
+                    <label for="name">Maharani Aapka Naam Likhiye</label>
+                    <input type="text" id="name" name="name" required>
+                </div>
+                
+                <div class="form-group">
+                    <label for="age">Aapke Avtaran Hone Ke Kitne Saal Hogaye Hai</label>
+                    <input type="number" id="age" name="age" required>
+                </div>
+                
+                <div class="form-group">
+                    <label for="address">Gift Pahuchane Ka Thikana</label>
+                    <textarea id="address" name="address" rows="4" required></textarea>
+                </div>
+                
+                <div class="form-group">
+                    <label for="phone">Phone Number (Jab aap free ho to call aayega)</label>
+                    <input type="tel" id="phone" name="phone" required>
+                </div>
+                
+                <div class="form-group">
+                    <label for="delivery-hero">Delivery Hero Chunniye</label>
+                    <select id="delivery-hero" name="delivery-hero" required>
+                        <option value="">Select a hero</option>
+                        <option value="Rishabh Ji">Rishabh Ji</option>
+                        <option value="Sharma Ji">Sharma Ji</option>
+                        <option value="Rishabh">Rishabh</option>
+                        <option value="Malik">Malik</option>
+                        <option value="Hero">Hero</option>
+                        <option value="Mujhse Behtar Koi Hai Kya">Mujhse Behtar Koi Hai Kya!!</option>
+                    </select>
+                </div>
+                
+                <div class="form-group">
+                    <label for="message">Special Message (ki aate waqt kuch lana ho ya me hi gift hu 😎)</label>
+                    <textarea id="message" name="message" rows="3"></textarea>
+                </div>
+                
+                <button type="submit" class="submit-btn">Place Order</button>
+            </form>
+        </section>
+
+        <div class="order-confirmation" id="order-confirmation" style="display: none;">
+            <div class="confirmation-content">
+                <i class="fas fa-check-circle"></i>
+                <h2>Order Successful Raha Aloo ji!</h2>
+                <p>Your birthday gifts will be delivered soon!</p>
+                <div class="delivery-code">
+                    <p>Your Delivery Code is:</p>
+                    <div class="code-display" id="code-display"></div>
+                    <p>Share this code with your delivery hero!</p>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <footer>
+        <div class="container">
+            <p>Sakshi ke liye ❤️ se banaya gaya</p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
