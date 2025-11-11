@@ -200,7 +200,7 @@ document.addEventListener('DOMContentLoaded', function() {
             phone: document.getElementById('phone').value,
             address: document.getElementById('address').value,
             delivery_hero: document.getElementById('delivery-hero').value,
-            message: document.getElementById('message').value,
+            
             cart_items: formatCartItemsForEmail(cart.items),
             order_total: cart.calculateTotal(),
             delivery_code: deliveryCode
@@ -234,4 +234,5 @@ document.addEventListener('DOMContentLoaded', function() {
                 alert('Order failed! Please try again.');
             });
     });
+
 });
